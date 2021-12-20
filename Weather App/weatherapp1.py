@@ -3,6 +3,11 @@ from tkinter import *
 import requests
 import json
 from datetime import datetime
+import os
+
+
+
+
 
 
 root = Tk() 
@@ -10,10 +15,8 @@ root.title("Weather Application")
 root.iconbitmap("/Users/abubakaribrahim/Desktop/Final Project/gui/Tutorial/rose.icns")
 root.geometry("420x280")
 
-api_key = "3948361729de2c6601e00639e528f097"
-
-
-
+API_KEY=os.getenv("API_KEY")
+print(API_KEY)
 
 #Function to update weather using new location 
 def update():
@@ -26,7 +29,7 @@ def update():
     global mylabel6
 
     loc = location.get()
-    api_link = "https://api.openweathermap.org/data/2.5/weather?q="+loc+"&appid="+api_key
+    api_link = "https://api.openweathermap.org/data/2.5/weather?q="+loc+"&appid="+API_KEY
     api_request = requests.get(api_link)
     api_data = api_request.json()
 
@@ -91,7 +94,7 @@ def update():
 
 #calling the api request
 city ="Ottawa"
-api_link = "https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid="+api_key
+api_link = "https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid="+API_KEY
 api_request = requests.get(api_link)
 api_data = api_request.json()
 
