@@ -7,15 +7,12 @@ import os
 
 
 
-
-
-
 root = Tk() 
 root.title("Weather Application")
 root.iconbitmap("/Users/abubakaribrahim/Desktop/Final Project/gui/Tutorial/rose.icns")
 root.geometry("420x280")
 
-API_KEY=os.getenv("API_KEY")
+API_KEY=os.environ.get('API_KEY','invalid')
 print(API_KEY)
 
 #Function to update weather using new location 
