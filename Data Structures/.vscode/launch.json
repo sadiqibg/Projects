@@ -13,7 +13,7 @@
       "environment": [],
       "program": "/Users/abubakaribrahim/Desktop/PythonProjects/Data Structures/build/Debug/outDebug",
       "internalConsoleOptions": "openOnSessionStart",
-      "MIMode": "gdb",
+      "MIMode": "lldb",
       "externalConsole": true
     }
   ]
