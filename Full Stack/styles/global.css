@@ -1,0 +1,14 @@
+header {
+    display: flex; 
+    justify-content: space-between; 
+    background: white;
+    padding: 10px;
+
+}
+
+
+body {
+    margin: 0; 
+    background: #eee;
+}
+
